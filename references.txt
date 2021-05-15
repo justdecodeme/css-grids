@@ -1,0 +1,2 @@
+Colors:
+#2a9d8f, #e9c46a, #e76f51, #42ab4e, #586ae6, #b5179e

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>grid-row</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .parent {
+    background: rgb(80, 80, 80);
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+    /* TODO: Turn on GRID Editor */
+  .child:nth-child(1) {
+    grid-row: 1 / span 2;
+    /* grid-row: 1 / 4; */
+  }
+  .child {
+    padding: 20px;
+  }
+  .child:nth-child(1) { background: #2a9d8f; }
+  .child:nth-child(2) { background: #e9c46a; }
+  .child:nth-child(3) { background: #e76f51; }
+  .child:nth-child(4) { background: #42ab4e; }
+  .child:nth-child(5) { background: #586ae6; }
+  .child:nth-child(6) { background: #b5179e; }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">
+      <h1>Home</h1>
+    </div>
+    <div class="child">
+      <h1>Search</h1>
+    </div>
+    <div class="child">
+      <h1>Logout</h1>
+    </div>
+    <div class="child">
+      <h1>About</h1>
+    </div>
+    <div class="child">
+      <h1>Team</h1>
+    </div>
+    <div class="child">
+      <h1>Social</h1>
+    </div>
+  </div>
+</body>
+</html>

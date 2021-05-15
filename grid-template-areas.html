@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>grid-template-areas</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .parent {
+    background: rgb(80, 80, 80);
+    display: grid;
+    /* Note: Specifies how to display columns and rows, using named grid items */
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main main right right'
+      'menu footer footer footer footer footer';
+  }
+
+  .header { grid-area: header; }
+  .menu { grid-area: menu; }
+  .main { grid-area: main; }
+  .right { grid-area: right; }
+  .footer { grid-area: footer; }
+
+  .parent div {
+    padding: 20px;
+  }
+
+  .parent div:nth-child(1) { background: #2a9d8f; }
+  .parent div:nth-child(2) { background: #e9c46a; }
+  .parent div:nth-child(3) { background: #e76f51; }
+  .parent div:nth-child(4) { background: #42ab4e; }
+  .parent div:nth-child(5) { background: #586ae6; }
+  .parent div:nth-child(6) { background: #b5179e; }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="main">Main</div>  
+    <div class="right">Right</div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
