@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project - PC View</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 40px 300px repeat(3, 40px);
+      grid-gap: 5px;
+      grid-template-areas:
+        "header menu menu menu"
+        "hero hero hero hero"
+        "main main . image"
+        "main main . extra"
+        "footer footer footer footer";
+    }
+    .child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }    
+    .header {
+      grid-area: header;
+      background: #0d1526;
+    }
+    .menu {
+      grid-area: menu;
+      background: #f03c4d;
+    }
+    .hero {
+      grid-area: hero;
+      background: #1e90ff;
+    }
+    .main {
+      grid-area: main;
+      background: #24344b;
+    }
+    .footer {
+      grid-area: footer;
+      background: #ffd166;
+    }
+    .extra {
+      grid-area: extra;
+      background: #06d6a0;
+    }
+    .image {
+      grid-area: image;
+      background: #bee9e8;
+    }  
+  </style>
+</head>
+<body>
+  <!-- Note 1: Order of `flex items` doesn't matter for `grid-areas` -->
+  <div class="grid">
+    <div class="child header">HEADER</div>
+    <div class="child menu">MENU</div>
+    <div class="child hero">HERO</div>
+    <div class="child main">MAIN</div>
+    <div class="child image">IMAGE</div>
+    <div class="child extra">EXTRA</div>
+    <div class="child footer">Footer</div>
+  </div>
+</body>
+</html>
